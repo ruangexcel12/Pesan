@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+perbaiki <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Hubungkan GAS ke GitHub</title>
+    <meta charset="UTF-8">
+    <title>Hubungkan GAS ke GitHub</title>
 </head>
 <body>
 
-    <h1>Integrasi Google Apps Script & GitHub</h1>
-    <button onclick="ambilData()">Ambil Data dari Google Drive</button>
-    <p id="hasil"></p>
+    <h1>Integrasi Google Apps Script & GitHub</h1>
+    <button onclick="ambilData()">Ambil Data dari Google Drive</button>
+    <p id="hasil"></p>
 
-    <script>
-        function ambilData() {
-            // Ganti dengan URL Web App Apps Script Anda sendiri
-            const urlGAS = "https://script.google.com/macros/s/AKfycbxzptVFpPQDZf3oZkTELz9fGI02CNxW2lUAxkJ2_dco6ZqxhP1Rky26ULUYFtYZG1GJ/exec"; 
+    <script>
+        function ambilData() {
+            // Ganti dengan URL Web App Apps Script Anda sendiri
+            const urlGAS = "https://script.google.com/macros/s/AKfycbxzptVFpPQDZf3oZkTELz9fGI02CNxW2lUAxkJ2_dco6ZqxhP1Rky26ULUYFtYZG1GJ/exec"; 
 
-            fetch(urlGAS)
-                .then(response => response.json())
-                .then(data => {
-                    // Menampilkan data yang dikirim oleh kode .gs
-                    document.getElementById("hasil").innerText = data.pesan;
-                })
-                .catch(error => {
-                    console.error("Terjadi kesalahan:", error);
-                });
-        }
-    </script>
+            fetch(urlGAS)
+                .then(response => response.json())
+                .then(data => {
+                    // Menampilkan data yang dikirim oleh kode .gs
+                    document.getElementById("hasil").innerText = data.pesan;
+                })
+                .catch(error => {
+                    console.error("Terjadi kesalahan:", error);
+                });
+        }
+    </script>
 </body>
 </html>
