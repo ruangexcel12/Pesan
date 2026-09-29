@@ -123,8 +123,20 @@
   </div>
 
   <script>
-const webAppUrl = "https://script.google.com/macros/s/AKfycbwBCpH14zkndx2OTLZxb0_EDRb1nz80pTIWoZ3yJLY9c7abHoTUaTuUu7snWDLr9DcUwQ/exec";
+function ambilData() {
+            // Ganti dengan URL Web App Apps Script Anda sendiri
+            const urlGAS = "https://script.google.com/macros/s/AKfycbwBCpH14zkndx2OTLZxb0_EDRb1nz80pTIWoZ3yJLY9c7abHoTUaTuUu7snWDLr9DcUwQ/exec"; 
 
+            fetch(urlGAS)
+                .then(response => response.json())
+                .then(data => {
+                    // Menampilkan data yang dikirim oleh kode .gs
+                    document.getElementById("hasil").innerText = data.pesan;
+                })
+                .catch(error => {
+                    console.error("Terjadi kesalahan:", error);
+                });
+        }
 
     let userLat = null;
     let userLng = null;
